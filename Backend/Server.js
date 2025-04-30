@@ -7,7 +7,9 @@ const dotenv = require('dotenv')
 dotenv.config();
 const PORT = process.env.PORT || 3000;
 const cors = require('cors')
-app.use(cors());
+app.use(cors({
+  origin:'https://tasksmster.netlify.app'
+}));
 // Middleware
 app.use(express.json());
 
